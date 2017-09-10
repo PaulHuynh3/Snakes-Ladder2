@@ -31,9 +31,19 @@
     //set it for comparison
     NSInteger playerInterger = [player integerValue];
     
+    
+    //will loop and add the number of players user specifies
     for (int i = 0; i <= playerInterger ; i++) {
         
-        [self.players addObject:player];
+        //instantiate the class
+        Player *playa = [[Player alloc]init];
+        
+        //name will increment by 1
+        playa.name = [NSString stringWithFormat:@"Player%i",i];
+        
+        //add instantiate to array.
+        [self.players addObject:playa];
+        
     }
 }
 

@@ -15,10 +15,31 @@ int main(int argc, const char * argv[]) {
     PlayerManager *playerManager = [[PlayerManager alloc]init];
     Player *player =[[Player alloc]init];
         
+   
+  [playerManager createPlayers:0];
+   while (playerManager.players.count > 2) {
+            
+    
     NSString *amountOfPlayerMessage = @"Please enter the number of players: ";
         NSLog(@"%@",amountOfPlayerMessage);
         
-         
+        //set character to 255
+        char characters [255];
+        
+        //limit input to max 255 characters fgets collect user's answer
+        fgets(characters, 255, stdin);
+        
+        //convert char to string
+        NSString* characterToString = [NSString stringWithCString:characters encoding:NSUTF8StringEncoding];
+        
+        NSString* numberPlayers = [characterToString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            int numberPlayerCompare = [numberPlayers intValue];
+        
+        if (playerManager.players.count < numberPlayerCompare){
+            NSLog(@"Please enter a valid number");
+        }
+        }
         
         
         NSLog(@"Welcome to Snakes and Ladders. Please type r to begin!");

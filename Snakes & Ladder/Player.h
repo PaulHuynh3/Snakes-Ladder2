@@ -16,6 +16,7 @@
 @property BOOL gameOver;
 @property NSString* name;
 
+
 -(void)roll;
 
 @end

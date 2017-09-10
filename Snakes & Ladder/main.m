@@ -15,6 +15,12 @@ int main(int argc, const char * argv[]) {
     PlayerManager *playerManager = [[PlayerManager alloc]init];
     Player *player =[[Player alloc]init];
         
+    NSString *amountOfPlayerMessage = @"Please enter the number of players: ";
+        NSLog(@"%@",amountOfPlayerMessage);
+        
+         
+        
+        
         NSLog(@"Welcome to Snakes and Ladders. Please type r to begin!");
         //the property default is no... when it hits yes game is over.
         while (player.gameOver) {

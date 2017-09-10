@@ -59,7 +59,7 @@
             self.output = [NSString stringWithFormat:@"Stairway to heaven you went up from %lu to %lu",self.currentSquare, destinationInteger];
             NSLog(@"%@",self.output);
         } else if (destinationInteger < self.currentSquare){
-            self.output = [NSString stringWithFormat:@"Get f*cked you went from %lu to %lu",destinationInteger, self.currentSquare];
+            self.output = [NSString stringWithFormat:@"Snake bit you. %lu to %lu",self.currentSquare, destinationInteger];
             NSLog(@"%@",self.output);
         }
         //this has to be last because it changes the _currentSquare.

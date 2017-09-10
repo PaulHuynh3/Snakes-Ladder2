@@ -16,8 +16,8 @@ int main(int argc, const char * argv[]) {
     Player *player =[[Player alloc]init];
         
    
-    
-   while (playerManager.players.count > 2) {
+    //continue looping while array.count is less than 2 so user has to input 2 or greater
+   while (playerManager.players.count < 2) {
             
     
     NSString *amountOfPlayerMessage = @"Please enter the number of players:";
@@ -34,20 +34,28 @@ int main(int argc, const char * argv[]) {
         //trimming white space
         NSString* numberPlayers = [characterToString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
        
-         //convert numberPlayers to int to compare
+       
+         //Convert numberPlayers to int to compare
         int numberPlayerCompare = [numberPlayers intValue];
        
-       //takes in NSNumber.
-       [playerManager createPlayers:];
-
-       //make sure user enters numeric value
-       if (![numberPlayers intValue]) {
+       //convert int to nsnumber for players class to take in the parameter
+       NSNumber *createPlayerObject = [NSNumber numberWithInteger:numberPlayerCompare];
+       
+       //Make sure user enters numeric value can also put ![numberPlayers intValue];
+       if (!numberPlayerCompare) {
            NSLog(@"enter a numeric number");
-        
-        if (playerManager.players.count < numberPlayerCompare){
-            NSLog(@"Please enter a valid number");
-        }
        }
+       
+       //For player objects to be created the number has to be greater than 1 and it has to be an intValue.
+       if(numberPlayerCompare > 1 && numberPlayerCompare) {
+       //takes in NSNumber to create the number of players...
+       [playerManager createPlayers: createPlayerObject];
+       
+       //display array of users created.
+       NSLog(@"%@",playerManager.players);
+
+       }
+       
    }
         
         

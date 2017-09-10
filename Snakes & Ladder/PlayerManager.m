@@ -25,7 +25,6 @@
 
 //Fill out the implementation of the method by writing a for loop. Instantiate the number of players according to the passed in parameter value. Make sure you give each player a name like "player1", "player2", etc. As you create each player don't forget to add it to the players array.
 
-//create
 -(void)createPlayers:(NSNumber *)player{
     
     //set it for comparison
@@ -33,7 +32,7 @@
     
     
     //will loop and add the number of players user specifies
-    for (int i = 0; i <= playerInterger ; i++) {
+    for (int i = 1; i <= playerInterger ; i++) {
         
         //instantiate the class
         Player *playa = [[Player alloc]init];
@@ -41,7 +40,7 @@
         //name will increment by 1
         playa.name = [NSString stringWithFormat:@"Player%i",i];
         
-        //add instantiate to array.
+        //add instantiations to array.
         [self.players addObject:playa];
         
     }

@@ -16,11 +16,11 @@ int main(int argc, const char * argv[]) {
     Player *player =[[Player alloc]init];
         
    
-  [playerManager createPlayers:0];
+    
    while (playerManager.players.count > 2) {
             
     
-    NSString *amountOfPlayerMessage = @"Please enter the number of players: ";
+    NSString *amountOfPlayerMessage = @"Please enter the number of players:";
         NSLog(@"%@",amountOfPlayerMessage);
         
         //set character to 255
@@ -31,15 +31,25 @@ int main(int argc, const char * argv[]) {
         
         //convert char to string
         NSString* characterToString = [NSString stringWithCString:characters encoding:NSUTF8StringEncoding];
-        
+        //trimming white space
         NSString* numberPlayers = [characterToString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            
-            int numberPlayerCompare = [numberPlayers intValue];
+       
+         //convert numberPlayers to int to compare
+        int numberPlayerCompare = [numberPlayers intValue];
+       
+       //takes in NSNumber.
+       [playerManager createPlayers:];
+
+       //make sure user enters numeric value
+       if (![numberPlayers intValue]) {
+           NSLog(@"enter a numeric number");
         
         if (playerManager.players.count < numberPlayerCompare){
             NSLog(@"Please enter a valid number");
         }
-        }
+       }
+   }
+        
         
         
         NSLog(@"Welcome to Snakes and Ladders. Please type r to begin!");

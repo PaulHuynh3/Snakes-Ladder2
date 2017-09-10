@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Player *player = [[Player alloc]init];
+    PlayerManager *playerManager = [[PlayerManager alloc]init];
+    Player *player =[[Player alloc]init];
         
         NSLog(@"Welcome to Snakes and Ladders. Please type r to begin!");
         //the property default is no... when it hits yes game is over.

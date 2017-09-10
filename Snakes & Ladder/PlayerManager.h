@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
 
 @interface PlayerManager : NSObject
+
+@property NSMutableArray* players;
+
+//use to create the number of players 
+-(void)createPlayers:(NSNumber*)player;
 
 @end

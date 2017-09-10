@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA5A2EFE1F64C70300C512CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5A2EFD1F64C70300C512CA /* main.m */; };
 		DA5A2F061F64C72900C512CA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5A2F051F64C72900C512CA /* Player.m */; };
+		DA5A2F091F64C82500C512CA /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5A2F081F64C82500C512CA /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		DA5A2EFD1F64C70300C512CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA5A2F041F64C72900C512CA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		DA5A2F051F64C72900C512CA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		DA5A2F071F64C82500C512CA /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		DA5A2F081F64C82500C512CA /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				DA5A2EFD1F64C70300C512CA /* main.m */,
 				DA5A2F041F64C72900C512CA /* Player.h */,
 				DA5A2F051F64C72900C512CA /* Player.m */,
+				DA5A2F071F64C82500C512CA /* PlayerManager.h */,
+				DA5A2F081F64C82500C512CA /* PlayerManager.m */,
 			);
 			path = "Snakes & Ladder";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			files = (
 				DA5A2F061F64C72900C512CA /* Player.m in Sources */,
 				DA5A2EFE1F64C70300C512CA /* main.m in Sources */,
+				DA5A2F091F64C82500C512CA /* PlayerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +260,7 @@
 				DA5A2F031F64C70300C512CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

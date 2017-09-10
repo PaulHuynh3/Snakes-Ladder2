@@ -16,7 +16,7 @@
     if (self){
     _players = [[NSMutableArray alloc]init];
     
-    Player *playerClass = [[Player alloc]init];
+    _currentIndex = 0;
     
 
     }

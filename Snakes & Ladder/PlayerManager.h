@@ -12,8 +12,16 @@
 @interface PlayerManager : NSObject
 
 @property NSMutableArray* players;
+@property NSInteger currentIndex;
 
 //use to create the number of players 
 -(void)createPlayers:(NSNumber*)player;
+
+
+-(void)roll;
+
+
+-(void)output;
+
 
 @end

@@ -11,17 +11,18 @@
 
 @interface PlayerManager : NSObject
 
-@property NSMutableArray* players;
-@property NSInteger currentIndex;
+@property (nonatomic, strong) NSMutableArray* players;
+
 
 //use to create the number of players 
--(void)createPlayers:(NSNumber*)player;
+-(void)createNumberOfPlayers:(NSNumber*)player;
 
-
+//take over the function of the player's roll
 -(void)roll;
 
 
--(void)output;
+//keep track of active players
+//-(Player *)currentPlayer;
 
 
 @end

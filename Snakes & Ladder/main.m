@@ -36,25 +36,34 @@ int main(int argc, const char * argv[]) {
        
        
          //Convert numberPlayers to int to compare
-        int numberPlayerCompare = [numberPlayers intValue];
+       NSInteger playerCount = [numberPlayers intValue];
+       if (playerCount == 0) {
+           NSLog(@"enter a numeric number");
+           continue;
+       }
+//        NSNumber *numberPlayerCompare = @([numberPlayers intValue]);
        
        //convert int to nsnumber for players class to take in the parameter
-       NSNumber *createPlayerObject = [NSNumber numberWithInteger:numberPlayerCompare];
+//       NSNumber *createPlayerObject = [NSNumber numberWithInteger:numberPlayerCompare];
        
        //Make sure user enters numeric value can also put ![numberPlayers intValue];
-       if (!numberPlayerCompare) {
-           NSLog(@"enter a numeric number");
-       }
+//       if (!numberPlayerCompare || numberPlayerCompare) {
+//           
+//           continue;
+//       }
        
        //For player objects to be created the number has to be greater than 1 and it has to be an intValue.
-       if(numberPlayerCompare > 1 && numberPlayerCompare) {
-       //takes in NSNumber to create the number of players...
-       [playerManager createPlayers: createPlayerObject];
+//       if(numberPlayerCompare > 1 && numberPlayerCompare) {
+//       //takes in NSNumber to create the number of players...
+//           [playerManager createNumberOfPlayers:createPlayerObject];
+////       [playerManager createPlayers: createPlayerObject];
+//       
+//       //display array of users created.
+//       NSLog(@"%@",playerManager.players);
+//
+//       }
        
-       //display array of users created.
-       NSLog(@"%@",playerManager.players);
-
-       }
+       [playerManager createNumberOfPlayers:@(playerCount)];
        
    }
         

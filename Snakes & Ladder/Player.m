@@ -67,15 +67,15 @@
     }
     
     //end while loop and display a message
-    if(self.currentSquare >= 100){
+    if (self.currentSquare >= 1){
         self.output = [NSString stringWithFormat:@"%@ wins the game!", self.name];
         NSLog(@"%@",self.output);
         self.gameOver = NO;
     }
     
-    
     //sequential order matters a lot make sure IF YOU want to see current position its at end.
-    NSLog(@"Your current position is %lu",self.currentSquare);
+    NSLog(@"%@ current position is %lu", self.name, self.currentSquare);
+
 }
 
 @end

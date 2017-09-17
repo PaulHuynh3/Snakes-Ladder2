@@ -42,6 +42,7 @@ int main(int argc, const char * argv[]) {
                 continue;
             }
             
+            //code to create number of players is run in here..
             [playerManager createNumberOfPlayers:@(playerCount)];
             
         }

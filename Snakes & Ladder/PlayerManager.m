@@ -18,6 +18,7 @@
     self = [super init];
     
     if (self){
+        //iniatilize the array so when Main iniatilize the players array is created.
         _players = [[NSMutableArray alloc]init];
         
         _currentIndex = 0;
@@ -51,7 +52,7 @@
 }
 
 
-
+//this sets the current player! ***
 -(Player*)nextPlayer{
     Player* nextPlayer = self.players[self.currentIndex];
     
@@ -63,7 +64,6 @@
 }
 
 
-//keeps track of which player is rolling
 -(void)roll{
     
     [[self nextPlayer] roll];

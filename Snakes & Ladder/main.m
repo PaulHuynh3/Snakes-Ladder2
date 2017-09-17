@@ -50,7 +50,7 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Welcome to Snakes and Ladders. Please type r to begin!");
         //the property default is set to NO, for it to run we need YES.
-        while (player.gameOver) {
+        while (player.game) {
             
             //set character to 255
             char inputchars [255];

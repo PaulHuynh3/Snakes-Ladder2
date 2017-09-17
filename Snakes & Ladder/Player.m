@@ -21,7 +21,7 @@
         //key:bottom of ladder. object:top of ladder snake is reverse
         _gameLogic =@{@4:@14, @9:@31,@17:@7,@20:@38,@28:@84, @40:@59, @52:@67, @63:@81, @64:@60, @89:@26, @95:@75, @99:@78};
         
-        _gameOver = YES;
+        _game = YES;
         
     }
     return self;
@@ -67,10 +67,10 @@
     }
     
     //end while loop and display a message
-    if (self.currentSquare >= 1){
+    if (self.currentSquare >= 100){
         self.output = [NSString stringWithFormat:@"%@ wins the game!", self.name];
         NSLog(@"%@",self.output);
-        self.gameOver = NO;
+        self.game = NO;
     }
     
     //sequential order matters a lot make sure IF YOU want to see current position its at end.

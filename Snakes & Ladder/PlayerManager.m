@@ -65,7 +65,7 @@
 
 
 -(void)roll{
-    
+    //nextPlayer method has the player class instance thats why we can just call the row..
     [[self nextPlayer] roll];
 
 }

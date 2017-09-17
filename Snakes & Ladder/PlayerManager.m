@@ -50,20 +50,47 @@
     }
 }
 
-- (NSUInteger)nextIndex {
-    NSUInteger result = self.currentIndex % self.players.count;
+
+
+-(Player*)nextPlayer{
+    Player* nextPlayer = self.players[self.currentIndex];
+    
     self.currentIndex += 1;
-    return result;
+    if (self.currentIndex > self.players.count -1){
+        self.currentIndex = 0;
+    }
+    return nextPlayer;
 }
 
+
+//keeps track of which player is rolling
 -(void)roll{
-    [[self currentPlayer] roll];
+    
+    [[self nextPlayer] roll];
+
 }
 
--(Player *)currentPlayer{
-    NSUInteger index = [self nextIndex];
-    Player *player = self.players[index];
-    return player;
-}
+
+
+
+
+//another way to determine next player
+
+////using modulo to determine which player is next
+//- (NSUInteger)nextIndex {
+//    NSUInteger result = self.currentIndex % self.players.count;
+//    self.currentIndex += 1;
+//    return result;
+//}
+//
+//
+////determine which player is next...
+//-(Player *)currentPlayer{
+//    //instantiate a new player everytime the index is different
+//    Player *player = self.players[self.nextIndex];
+//    return player;
+//}
+
+
 
 @end

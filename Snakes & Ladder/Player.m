@@ -21,7 +21,7 @@
         //key:bottom of ladder. object:top of ladder snake is reverse
         _gameLogic =@{@4:@14, @9:@31,@17:@7,@20:@38,@28:@84, @40:@59, @52:@67, @63:@81, @64:@60, @89:@26, @95:@75, @99:@78};
         
-        _gameOver = NO;
+        _gameOver = YES;
         
     }
     return self;
@@ -33,7 +33,7 @@
     int diceRoll = arc4random_uniform(6)+1;
     
     //display when roll is called in main
-    NSLog(@"You rolled a %i",diceRoll);
+    NSLog(@"%@ rolled a %i",self.name, diceRoll);
     
     //your current position increments when a new dice rolls
     self.currentSquare += diceRoll;
@@ -68,7 +68,7 @@
     
     //end while loop and display a message
     if(self.currentSquare >= 100){
-        self.output = @"You win the game!";
+        self.output = [NSString stringWithFormat:@"%@ wins the game!", self.name];
         NSLog(@"%@",self.output);
         self.gameOver = NO;
     }

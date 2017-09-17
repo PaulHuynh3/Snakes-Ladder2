@@ -21,8 +21,7 @@
 -(void)roll;
 
 
-//keep track of active players
-//-(Player *)currentPlayer;
+
 
 
 @end

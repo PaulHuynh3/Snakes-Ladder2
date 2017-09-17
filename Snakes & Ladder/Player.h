@@ -10,13 +10,16 @@
 
 @interface Player : NSObject
 
-@property NSInteger currentSquare;
-@property NSDictionary* gameLogic;
-@property NSString* output;
-@property BOOL gameOver;
-@property NSString* name;
+@property (nonatomic) NSInteger currentSquare;
+@property (nonatomic) NSDictionary* gameLogic;
+@property (nonatomic) NSString* output;
+@property (nonatomic) BOOL gameOver;
+@property (nonatomic) NSString* name;
 
 
 -(void)roll;
+
+-(instancetype)init;
+
 
 @end
